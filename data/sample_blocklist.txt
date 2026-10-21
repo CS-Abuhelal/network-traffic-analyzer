@@ -1,0 +1,24 @@
+# sample_blocklist.txt
+#
+# SAMPLE / DEMO DATA - NOT A REAL THREAT FEED.
+#
+# This file lists IP ranges the analyzer treats as "known malicious" for
+# demonstration and testing purposes. To keep this project honest, the
+# ranges below are the ones officially reserved by RFC 5737 for use in
+# documentation and examples (192.0.2.0/24, 198.51.100.0/24, 203.0.113.0/24).
+# They are NOT routable on the real internet and are NOT actually
+# associated with any attacker - they just give the demo something
+# realistic-looking to detect without making false claims about real IPs.
+#
+# In a real deployment, replace this file with (or merge it with) a feed
+# such as:
+#   - Spamhaus DROP / EDROP lists
+#   - AbuseIPDB blacklist export
+#   - AlienVault OTX pulses
+#   - Your own SIEM/firewall block list
+#
+# Format: one CIDR range per line. Lines starting with # are comments.
+
+192.0.2.0/24      # RFC 5737 TEST-NET-1 (stand-in for "known scanner" range)
+198.51.100.0/24    # RFC 5737 TEST-NET-2 (stand-in for "known botnet C2" range)
+203.0.113.0/24     # RFC 5737 TEST-NET-3 (stand-in for "known malware host" range)
